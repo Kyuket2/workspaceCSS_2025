@@ -1,0 +1,208 @@
+/* Syle file made by Kyle
+=========================================================================
+00: css variable
+01: color
+02: layout
+03: typography
+04: transition, animaion, selector practice
+05: any exporation
+=========================================================================
+*/
+
+/** 00 css variable */
+
+:root{
+    --body-color:hsla(263, 35%, 27%,0.5);
+    --page-color:hsla(193, 49%, 63%, 0.9);
+    --sidebar-color:hsla(122,57%,21%,0.1);
+    --text-color:hsla(42, 76%, 43%, 0.51);
+    --files-width:35%;
+    --files-top:85vh;
+    --side-bar-height:100%
+    --side-bar-width:30vh;
+    --bottom-bar-height:20vh;
+
+}
+
+
+
+
+/** 01 color */
+
+body{
+    background-color:var(--body-color);
+}
+#zen-intro{
+    background-color:var(--page-color)
+}
+.sidebar{
+    background-color: var(--sidebar-color);
+}
+
+/** h1 */
+h1{
+    background-color: var(--text-color);
+}
+
+/** 02 Layout **/
+
+div.explanation, div.requirements, div.benefits, div.participation{
+    position: fixed;
+    width: var(--files-width);
+    top: var(--files-top);
+}
+
+div.explanation{
+    left: 5vw;
+}
+
+ div.requirements{
+    left: 25vw;
+ }
+
+ div.benefits{
+    left: 45vw;
+ }
+
+ div.participation{
+    left: 65vw;
+ }
+
+ /** Side Bar **/
+
+ .sidebar{
+    position: absolute;
+    top: 10%;
+    right: 0%;
+    width: 20%;
+    height: 65%;
+ }
+
+ /* Extra1-4 Decoration Block */
+
+ div.extra2{
+    position: fixed;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    top: 85%;
+    height:var(--bottom-bar-height);
+    background-color: hsl(158, 100%, 56%);
+ }
+
+ div.extra1{
+    position: fixed;
+    top: 8%;
+    left: 70vh;
+    width: 400px;
+    height: 800px;
+    transform: rotate(20deg);
+    background-image: url(../img/newspaper2.jpg);
+    z-index: -1;
+ }
+
+ section.intro{
+    position: fixed;
+    top: 8%;
+    left: 70vh;
+    width: 400px;
+    height: 800px;
+    background-image: url(../img/newspaper1.jpg);
+
+ }
+
+ /* File Tab */
+
+ div.explanation h3, div.requirements h3, div.benefits h3, div.participation h3{
+    margin-top: -5%;
+    border: 3px dotted black;
+    width: 200px;
+    background-color: hsl(158, 100%, 56%);
+ }
+
+ /** 03 Typegraphy **/
+
+/**@font-face {
+  font-family: 'quicksand';
+  src: url('../fonts/')
+  font-weight: normal; 
+  font-style: normal; 
+}
+
+
+ header h1{
+    font-family: '';
+ }
+ **/
+
+ #design-selection h3, li{
+    visibility: hidden;
+ }
+
+ #design-archives h3{
+    display: none;
+ }
+
+ #zen-resources h3, a{
+   display: none;
+ }
+
+ /* selector */
+
+ a:hover{
+    /* pick a style */
+    font-size: 1.0em;
+ }
+
+ h3:hover{
+   color: aliceblue;
+ }
+
+ div.explanation:active{
+   top: 10%;
+   height: 80vh;
+ }
+
+ div.requirements:active{
+   top:10%;
+   height: 80vh;
+ }
+
+ div.benefits:active{
+   top: 10%;
+   height: 80vh;
+ }
+
+ div.participation:active{
+   top: 10%;
+   height: 80vh;
+ }
+
+ p::first-letter{
+   font-size: small;
+   text-transform: lowercase;
+ }
+
+ P:nth-child(2n){
+background-color: azure;
+ }
+
+ /* try text shadow */
+ div{
+   box-shadow: 4px 4px 100px grey;
+ }
+
+ /* border radius of the tab */
+ 
+div.explanation h3, div.requirements h3, div.benefits h3, div.participation h3{
+   border-radius: 15% 0% 0% 0%;
+}
+ 
+ul{
+   list-style: ;
+}
+  
+ 
+   
+
+ 
