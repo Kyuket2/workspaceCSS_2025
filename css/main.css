@@ -1,4 +1,4 @@
-/* Syle file made by Kyle
+/* Style file made by Kyle
 =========================================================================
 00: css variable
 01: color
@@ -14,11 +14,11 @@
 :root{
     --body-color:hsla(263, 35%, 27%,0.5);
     --page-color:hsla(193, 49%, 63%, 0.9);
-    --sidebar-color:hsla(122,57%,21%,0.1);
+    --sidebar-color:hsla(158, 100%, 56%, 0.8);
     --text-color:hsla(42, 76%, 43%, 0.51);
     --files-width:35%;
     --files-top:85vh;
-    --side-bar-height:100%
+    --side-bar-height:100%;
     --side-bar-width:30vh;
     --bottom-bar-height:20vh;
 
@@ -76,6 +76,7 @@ div.explanation{
     right: 0%;
     width: 20%;
     height: 65%;
+    z-index: -1;
  }
 
  /* Extra1-4 Decoration Block */
@@ -114,28 +115,23 @@ div.explanation{
  /* File Tab */
 
  div.explanation h3, div.requirements h3, div.benefits h3, div.participation h3{
-    margin-top: -5%;
-    border: 3px dotted black;
-    width: 200px;
+    margin-top: -3%;
+    border: 1px solid black;
+    width: 250px;
     background-color: hsl(158, 100%, 56%);
  }
 
  /** 03 Typegraphy **/
-
-/**@font-face {
-  font-family: 'quicksand';
-  src: url('../fonts/')
-  font-weight: normal; 
-  font-style: normal; 
-}
-
-
  header h1{
-    font-family: '';
+   font-family: "Swanky and Moo Moo", "Comic Sans MS", "Brush Script MT", cursive;
+   padding: 5px;
+   font-weight: 400;
+   font-style: normal;
+   line-height: 1.6;
+   text-align: center;
  }
- **/
 
- #design-selection h3, li{
+ #design-selection h3{
     visibility: hidden;
  }
 
@@ -143,7 +139,7 @@ div.explanation{
     display: none;
  }
 
- #zen-resources h3, a{
+ #zen-resources h3{
    display: none;
  }
 
@@ -161,21 +157,34 @@ div.explanation{
  div.explanation:active{
    top: 10%;
    height: 80vh;
+   transition: top 0.6s ease, height 0.6s ease;
+   background-color: hsl(158, 100%, 56%);
+   border-radius: 15px;
  }
 
  div.requirements:active{
    top:10%;
    height: 80vh;
+   transition: top 0.6s ease, height 0.6s ease;
+   background-color: hsl(158, 100%, 56%);
+   border-radius: 15px;
  }
 
  div.benefits:active{
    top: 10%;
    height: 80vh;
+   transition: top 0.6s ease, height 0.6s ease;
+   background-color: hsl(158, 100%, 56%);
+   border-radius: 15px;
  }
 
  div.participation:active{
    top: 10%;
    height: 80vh;
+   transition: top 0.6s ease, height 0.6s ease;
+   background-color: hsl(158, 100%, 56%);
+   border-radius: 15px;
+   z-index: 1;
  }
 
  p::first-letter{
@@ -183,26 +192,79 @@ div.explanation{
    text-transform: lowercase;
  }
 
- P:nth-child(2n){
-background-color: azure;
+ P:nth-child(4n){
+   background-color: rgba(49, 217, 105, 0.422);
+ }
+
+ P:nth-child(4n+1){
+   background-color: rgb(42, 134, 0);
  }
 
  /* try text shadow */
- div{
+ p{
    box-shadow: 4px 4px 100px grey;
  }
 
  /* border radius of the tab */
  
 div.explanation h3, div.requirements h3, div.benefits h3, div.participation h3{
-   border-radius: 15% 0% 0% 0%;
+   border-radius: 15px 150px 5px 5px;
+   margin-left: 2px;
 }
  
 ul{
-   list-style: ;
+   list-style: url(../img/star.png);
 }
   
+/* transistion transform */
+section.intro h3 ~p{
+   text-transform: capitalize;
+   opacity: 1;
+   transition: all 3s ease-in-out;
+}
+
+section.intro h3:hover ~p{
+   opacity: 0;
+   transform: scale(0.9);
+}
+
+footer{
+   position: fixed;
+   bottom: 1vh;
+   z-index: 4;
+   animation: backandforth 6s ease-in-out infinite alternate;
+}
+
+header{
+   position:absolute;
+   right: -45vw;
+   top:-10vh;
+   width: 120%;
+   background-color: blue;
+   z-index: 1;
+}
  
-   
+h2{
+   background-image: linear-gradient(0deg,red,yellow,blue);
+   animation: 1s infinite running changeColor;
+}
+
+@keyframes changeColor{
+   from{background-image: linear-gradient(90deg,red,yellow,blue);}
+   50%{background-image: linear-gradient(180deg,red,yellow,blue);}
+   to{background-image:linear-gradient(270deg,red,yellow,blue);}
+}
+
+@keyframes backandforth {
+   0% {transform: translateX(0);}
+  50% {transform: translateX(20px);}
+  100% {transform: translateX(0);}
+}
+
+/** 05 fun stuff */
+aside.sidebar{
+   clip-path: polygon(0 0, 0 60%, 50% 100%, 90% 60%, 90% 0);
+}
+
 
  
